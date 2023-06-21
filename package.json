@@ -4,14 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev --no-cache --continue",
-    "lint": "turbo lint",
-    "clean": "turbo clean && rm -rf node_modules",
+    "build": "pnpm -r run build",
+    "dev": "pnpm -r run dev",
+    "lint": "pnpm -r run lint",
+    "clean": "npx rimraf node_modules pnpm-lock.yaml",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "commit": "cz-customizable",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo build --filter=docs^... && changeset publish"
+    "release": "turbo build --filter=docs^... && changeset publish",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -19,10 +21,27 @@
   "private": true,
   "devDependencies": {
     "@changesets/cli": "^2.26.1",
+    "@commitlint/cli": "^17.6.5",
+    "@typescript-eslint/eslint-plugin": "^5.60.0",
+    "@typescript-eslint/parser": "^5.60.0",
+    "commitlint-config-gitmoji": "^2.3.1",
+    "cz-customizable": "^7.0.0",
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-vue": "^9.15.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
     "turbo": "^1.10.3"
   },
   "packageManager": "pnpm@8.6.0",
   "pnpm": {
     "default": "8.6.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    }
   }
 }
