@@ -3,7 +3,7 @@ module.exports = {
   types: [
     { value: ":rocket: initial", name: "🎉 initial: 初始化项目" },
     { value: ":construction: wip", name: "🚧 wip: 工作进行中" },
-    { value: ":sparkles: feat", name: "✨ feat: 新增一个功能" },
+    { value: ":sparkles: feat", name: "✨  feat: 新增一个功能" },
     { value: ":bug: fix", name: "🐛 fix: 修复一个Bug" },
     {
       value: ":hammer: refactor",
@@ -12,13 +12,13 @@ module.exports = {
     { value: ":pencil: docs", name: "📝 docs: 文档变更" },
     {
       value: ":white_check_mark: test",
-      name: "✅ test: 添加缺失的测试或更正现有的测试",
+      name: "✅  test: 添加缺失的测试或更正现有的测试",
     },
     {
       value: ":thought_balloon: chore",
       name: "💭 chore: 构建过程或辅助工具的变动",
     },
-    { value: ":rewind: revert", name: "⏪ revert: 代码回退" },
+    { value: ":rewind: revert", name: "⏪  revert: 代码回退" },
     { value: ":zap: perf", name: "⚡️ perf: 提升性能" },
     { value: ":lipstick: ui", name: "💄 ui: 更新UI和样式" },
     { value: ":art: style", name: "🎨 style: 改进代码结构/代码格式" },
@@ -32,15 +32,15 @@ module.exports = {
   ],
   // 选择scope的提示信息
   messages: {
-    type: "请选择您要提交的类型:",
+    type: "请选择提交类型:",
     scope: "请输入修改范围(可选):",
     // allowCustomScopes为true时使用
     customScope: "请输入文件修改范围(可选):",
     subject: "请简要描述提交(必选):",
     body: "请输入详细描述，使用'|'换行(可选):",
-    breaking: "列出任何突破性的变化(可选)",
+    breaking: "列出任何突破性的变化(可选):",
     footer: "请输入要关闭的issue(可选)。例:#31，#34:",
-    confirmCommit: "您确定要继续执行上面的提交吗?",
+    confirmCommit: "确定要继续执行上面的提交吗?",
   },
   scopes: [
     "user",

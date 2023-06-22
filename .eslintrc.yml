@@ -14,15 +14,76 @@ plugins:
   - '@typescript-eslint'
   - vue
 rules:
-  indent:
-    - error
-    - 4
-  linebreak-style:
-    - error
-    - windows
-  quotes:
-    - error
+  indent: # 缩进
+    - warn
+    - 2
+  quotes: # 引号类型
+    - warn
     - single
-  semi:
-    - error
+  semi: # 是否使用分号
+    - warn
     - never
+  semi-style: # 强制分号的位置
+    - warn
+    - first
+  array-callback-return: # 数组方法的回调中强制执行 return 语句
+    - warn
+    - checkForEach: true # 强制 forEach 数组方法回调不返回
+  space-before-blocks: # 块的间距
+    - warn
+    -
+      functions: always
+      keywords: always
+      classes: always
+  arrow-spacing: # 箭头函数和块的间距
+    - warn
+    -
+      before: true
+      after: true
+  keyword-spacing: # 关键字（if、try）前后间距
+    - warn
+    -
+      before: true
+      after: true
+  switch-colon-spacing: # switch语句冒号间距
+    - warn
+    -
+      before: false
+      after: true
+  template-curly-spacing: # 模板字符串的嵌入表达式周围有空格
+    - warn
+    - always
+  space-unary-ops: # 一元运算符周围空格
+    - warn
+    -
+      words: true # new、delete等
+      nonwords: false # ++、--等
+  space-in-parens: # 括号内空格
+    - warn
+    - never
+  space-before-function-paren: # 方法名与左括号之间空格
+    - warn
+    - never
+  key-spacing: # 键和值之间的间距
+    - warn
+    -
+      beforeColon: false
+      afterColon: true # 冒号之后空格
+  array-bracket-spacing: # 数组括号内强制保持一致的间距
+    - warn
+    - always
+    -
+      singleValue: false
+  rest-spread-spacing:
+    - warn
+    - never
+  no-import-assign: # 不允许给导入的内容赋值
+    - error
+  no-func-assign: # 不允许给声明的函数赋值
+    - error
+  no-extra-parens: # 不必要的括号
+    - warn
+    - all
+    -
+      conditionalAssign: false # 允许在条件测试表达式中的赋值周围使用额外的括号
+      returnAssign: false # 允许在 return 语句中的赋值周围使用额外的括号

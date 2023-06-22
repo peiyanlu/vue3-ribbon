@@ -9,12 +9,14 @@
     "lint": "pnpm -r run lint",
     "clean": "npx rimraf node_modules pnpm-lock.yaml",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "commit": "cz-customizable",
+    "commit": "git add -A && git cz",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo build --filter=docs^... && changeset publish",
-    "prepare": "husky install"
+    "release": "build build --filter=docs^... && changeset publish",
+    "prepare": "husky install",
+    "docs:dev": "pnpm -r run docs:dev"
   },
+  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -24,6 +26,7 @@
     "@commitlint/cli": "^17.6.5",
     "@typescript-eslint/eslint-plugin": "^5.60.0",
     "@typescript-eslint/parser": "^5.60.0",
+    "commitizen": "^4.3.0",
     "commitlint-config-gitmoji": "^2.3.1",
     "cz-customizable": "^7.0.0",
     "eslint": "^8.43.0",
@@ -42,6 +45,9 @@
   "config": {
     "commitizen": {
       "path": "cz-customizable"
+    },
+    "cz-customizable": {
+      "config": ".cz-config.cjs"
     }
   }
 }
