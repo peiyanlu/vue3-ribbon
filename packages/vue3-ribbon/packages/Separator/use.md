@@ -1,0 +1,13 @@
+```javascript
+tools: [
+  {
+    ...
+  },
+  {
+    type: 'separator'
+  },
+  {
+    ...
+  }
+]
+```

@@ -1,0 +1,20 @@
+```vue
+<CSRibbon
+  :config="config"
+  ref="ribbon"
+  :disabled.sync="disabled"
+  fileName="fileName.db"
+  @ribbon:mounted="onRibbonMounted"
+  @ribbon:command="onRibbonCommand"
+  @ribbon:popup="onRibbonPopup"
+  @ribbon:tab="onRibbonTab"
+  @ribbon:disabled="onRibbonDisabled"
+  @ribbon:collapsed="onRibbonCollapsed"
+  @ribbon:hidden="onRibbonHidden"
+  @ribbon:beforedestroy="onRibbonBeforeDestroy"
+  @ribbon:destroy="onRibbonDestroy"
+  @ribbon:params="onRibbonParams"
+>
+
+</CSRibbon>
+```
